@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  
+  - name: enriched_flights
+    description: 'Joining other tables to get an enriched flight table'
+
+  - name: flights_per_carrier
+    description: 'Number of flights per carrier'
+    columns:
+      - name: carrier_id
+        description: 'Carrier Identifier'
+        tests:
+          - relationships:
+              to: ref('carriers')
+              field: carrier_id
+      - name: carrier_name
+        description: 'Carrier Name'
+        tests:
+          - relationships:
+              to: ref('carriers')
+              field: carrier_name
+      - name: n_flights
+        description: 'Number of flights'
