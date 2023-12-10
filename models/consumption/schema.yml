@@ -4,6 +4,12 @@ models:
   
   - name: enriched_flights
     description: 'Joining other tables to get an enriched flight table'
+    columns:
+      - name: total_delay
+        description: 'Total delay, sum of departure_delay and arrival_delay'
+        tests:
+          - delay_validation:
+              severity: warn
 
   - name: flights_per_carrier
     description: 'Number of flights per carrier'
