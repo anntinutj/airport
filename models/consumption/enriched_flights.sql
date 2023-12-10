@@ -19,7 +19,8 @@ select
     flights.*,
     carriers.carrier_name,
     a1.airport_name as origin_airport_name,
-    a2.airport_name as destination_airport_name
+    a2.airport_name as destination_airport_name,
+    {{ addition('flights.departure_delay','flights.arrival_delay') }} as total_delay
 from 
     flights
     join carriers
