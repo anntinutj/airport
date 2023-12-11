@@ -1,7 +1,5 @@
 version: 2
-
 models:
-  
   - name: enriched_flights
     description: 'Joining other tables to get an enriched flight table'
     columns:
