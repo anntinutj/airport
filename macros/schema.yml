@@ -1,0 +1,12 @@
+version: 2
+
+macros:
+  - name: addition
+    description: A macro to add two values
+    arguments:
+      - name: column1
+        type: numeric
+        description: First value to be added
+      - name: column2
+        type: numeric
+        description: Second value to be added
